@@ -4,6 +4,7 @@ import Square from './Square';
 const Board = ({ board, handleSquareClick, winningSquares }) => {
   const renderSquare = position => {
     const isWinningSquare = winningSquares.includes(position);
+
     return (
       <Square
         value={board[position]}
@@ -12,6 +13,7 @@ const Board = ({ board, handleSquareClick, winningSquares }) => {
       />
     );
   };
+
   return (
     <div className="board">
       <div className="board-row">
