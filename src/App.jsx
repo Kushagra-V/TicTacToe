@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Board from './components/Board';
 import { calculateWinner } from './helpers';
 import './styles/root.scss';
+import History from './components/History';
 
 const app = () => {
   const [history, setHistory] = useState([
@@ -35,11 +36,15 @@ const app = () => {
     });
     setCurrentMove(prev => prev + 1);
   };
+  const moveto = move => {
+    setCurrentMove(move);
+  };
   return (
     <div className="app">
       <h1>TIC TAC TOE</h1>
       <h2>{message}</h2>
       <Board board={current.board} handleSquareClick={handleSquareClick} />
+      <History history={history} moveto={moveto} currentMove={currentMove} />
     </div>
   );
 };
