@@ -1,3 +1,3 @@
-# Nano React App Default Javascript Template
+# TIC TAC TOE Game
 
 DEPLOYMENT LINK : https://tictacbruh.surge.sh/
